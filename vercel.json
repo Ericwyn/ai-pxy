@@ -7,6 +7,10 @@
         {
             "source": "/openai/:match*",
             "destination": "https://api.openai.com/:match*"
+        },
+        {
+            "source": "/ipmsg",
+            "destination": "https://api.ipify.org?format=json"
         }
     ]
 }
