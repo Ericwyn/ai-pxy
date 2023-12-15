@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>API-PXY</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+    }
+    
+    h1 {
+      color: #333;
+    }
+    
+    p {
+      color: #666;
+    }
+    
+    .url-container {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 20px auto;
+      max-width: 50%;
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+    
+    .url-container input[type="text"] {
+      flex: 1;
+      margin-right: 10px;
+      padding: 5px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+    
+    .url-container button {
+      padding: 5px 10px;
+      background-color: #4CAF50;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+  </style>
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      var currentDomain = window.location.hostname;
+      var protocol = window.location.protocol;
+
+      var openaiUrl = protocol + "//" + currentDomain + '/openai/';
+      var geminiUrl = protocol + "//" + currentDomain + '/gemini/';
+      
+    //   document.getElementById('openai-url').textContent = openaiUrl;
+    //   document.getElementById('gemini-url').textContent = geminiUrl;
+      document.getElementById('openai-input').value = openaiUrl;
+      document.getElementById('gemini-input').value = geminiUrl;
+    });
+    
+    function copyUrl(elementId) {
+      var inputElement = document.getElementById(elementId);
+      inputElement.select();
+      inputElement.setSelectionRange(0, 99999);
+      document.execCommand("copy");
+      alert("URL已复制到剪贴板！");
+    }
+  </script>
+</head>
+<body>
+  <h1>API-PXY</h1>
+  <p>ai 接口代理程序, 基于 Vercel</p>
+  <p>源码: <a href="https://github.com/Ericwyn/api-pxy">https://github.com/Ericwyn/api-pxy</a></p>
+  <br>
+  <br>
+  <br>
+  <br>
+  <h2> Open AI</h2>
+  <p id="openai-url">使用以下地址替代 <a href="https://api.openai.com">https://api.openai.com</a></p>
+  <div class="url-container">
+    <input type="text" id="openai-input" readonly>
+    <button onclick="copyUrl('openai-input')">复制</button>
+  </div>
+
+  <br>
+  <br>
+  
+  <h2>Google Gemini</h2>
+  <p id="gemini-url">使用以下地址替代 <a href="https://generativelanguage.googleapis.com">https://generativelanguage.googleapis.com</a></p>
+  <div class="url-container">
+    <input type="text" id="gemini-input" readonly>
+    <button onclick="copyUrl('gemini-input')">复制</button>
+  </div>
+
+</body>
+</html>
