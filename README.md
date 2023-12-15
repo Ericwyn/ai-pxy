@@ -1,4 +1,4 @@
-# API-PXY
+# AI-PXY
 一个非常简单的 [Vercel](https://vercel.com/) 程序
 
 
