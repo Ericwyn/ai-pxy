@@ -7,7 +7,7 @@
 <div class="app">
 	<h1>AI-PXY</h1>
 	<p>ai 接口代理程序, 基于 Vercel</p>
-	<p>源码: <a href="https://github.com/Ericwyn/api-pxy">https://github.com/Ericwyn/ai-pxy</a></p>
+	<p>源码: <a href="https://github.com/Ericwyn/ai-pxy">https://github.com/Ericwyn/ai-pxy</a></p>
 	<br>
 	<br>
 	<br>
